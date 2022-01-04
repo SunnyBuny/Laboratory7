@@ -1,6 +1,6 @@
 #include <iostream>
 
-int sum(int n) {// сумма цифр в числе
+int sum(int n) {// СЃСѓРјРјР° С†РёС„СЂ РІ С‡РёСЃР»Рµ
 	int sum = 0;
 	while (n != 0) {
 		sum += n % 10;
@@ -11,7 +11,7 @@ int sum(int n) {// сумма цифр в числе
 
 
 int main() {
-	int t;// количество наборов входных данных
+	int t;// РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР°Р±РѕСЂРѕРІ РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С…
 	std::cout << "Enter the amount of input data\n";
 	while (!(std::cin >> t) || t < 0) {
 		std::cin.clear();
