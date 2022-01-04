@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-std::string convert(int n) { //перевод в двоичную систему
+std::string convert(int n) { //РїРµСЂРµРІРѕРґ РІ РґРІРѕРёС‡РЅСѓСЋ СЃРёСЃС‚РµРјСѓ
 	std::string n1;
 	int i = 0;
 	while (n != 0) {
@@ -20,7 +20,7 @@ std::string convert(int n) { //перевод в двоичную систему
 	return n1;
 }
 
-bool only1and0(std::string a) {	//проверка на то, что число состоит только из 1 и 0, иначе оно не может быть двудесятичным
+bool only1and0(std::string a) {	//РїСЂРѕРІРµСЂРєР° РЅР° С‚Рѕ, С‡С‚Рѕ С‡РёСЃР»Рѕ СЃРѕСЃС‚РѕРёС‚ С‚РѕР»СЊРєРѕ РёР· 1 Рё 0, РёРЅР°С‡Рµ РѕРЅРѕ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РґРІСѓРґРµСЃСЏС‚РёС‡РЅС‹Рј
 	for (int i = 0; i < a.length(); i++) {
 		if (a[i] != '1' && a[i] != '0') {
 			return false;
@@ -30,7 +30,7 @@ bool only1and0(std::string a) {	//проверка на то, что число состоит только из 1 
 }
 
 
-std::string inString(int a) { //перевод в строку
+std::string inString(int a) { //РїРµСЂРµРІРѕРґ РІ СЃС‚СЂРѕРєСѓ
 	std::string a1;
 	while (a) {
 		a1.insert(0, 1, a % 10 + '0');
@@ -39,7 +39,7 @@ std::string inString(int a) { //перевод в строку
 	return a1;
 }
 
-bool compare(std::string a1, std::string a2) { //проверка на двудесятичность
+bool compare(std::string a1, std::string a2) { // РїСЂРѕРІРµСЂРєР° РЅР° РґРІСѓРґРµСЃСЏС‚РёС‡РЅРѕСЃС‚СЊ
 	bool equal = 1;
 	for (int i = 0; i < a1.length(); i++) {
 		equal = 1;
@@ -60,7 +60,7 @@ int main() {
 
 
 	int n, a = 1;
-	int i = 0;// счётчик 
+	int i = 0;// СЃС‡С‘С‚С‡РёРє
 	std::cout << "The program prints the n-th smallest two-decimal number" << std::endl << "Enter n: ";
 	std::cin >> n;
 	while (i < n) {
