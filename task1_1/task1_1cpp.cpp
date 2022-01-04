@@ -12,14 +12,14 @@ int convert(std::string num) {
 	}
 	return num_10;
 }
-// нужно перевести числа из 14ти ричной системы счисления в 6ти ричную
+// РЅСѓР¶РЅРѕ РїРµСЂРµРІРµСЃС‚Рё С‡РёСЃР»Р° РёР· 14С‚Рё СЂРёС‡РЅРѕР№ СЃРёСЃС‚РµРјС‹ СЃС‡РёСЃР»РµРЅРёСЏ РІ 6С‚Рё СЂРёС‡РЅСѓСЋ
 int main() {
 	std::string num_14;
 	int num_10;
 	std::cout << "Enter tne number in 14 score field" << "\n";
 	bool input = true;
 
-	while (input) {// проверка на ввод
+	while (input) {// РїСЂРѕРІРµСЂРєР° РЅР° РІРІРѕРґ
 		getline(std::cin, num_14);
 		if (num_14.size() == 0 || num_14.size() > 10) {
 			std::cout << "The minimum number of digits is 1 and maximum is 10. Enter the number again: ";
