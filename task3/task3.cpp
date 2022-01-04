@@ -2,20 +2,20 @@
 #include <string>
 
 
-std::string convert(std::string StraightCode) // перевод числа в обратный код 
+std::string convert(std::string StraightCode) // РїРµСЂРµРІРѕРґ С‡РёСЃР»Р° РІ РѕР±СЂР°С‚РЅС‹Р№ РєРѕРґ 
 {
 
 	std::string BackCode;
 
-	if (StraightCode[0] == 0) // если число положительное то обратный код равен прямому коду
+	if (StraightCode[0] == 0) // РµСЃР»Рё С‡РёСЃР»Рѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‚Рѕ РѕР±СЂР°С‚РЅС‹Р№ РєРѕРґ СЂР°РІРµРЅ РїСЂСЏРјРѕРјСѓ РєРѕРґСѓ
 	{
 		BackCode += StraightCode;
 		BackCode.insert(0, 1, '0');
 	}
-	else if (StraightCode[0] == 1) // если число отрицательное то обратный код равен прямому коду с противоположными занчениями
+	else if (StraightCode[0] == 1) // РµСЃР»Рё С‡РёСЃР»Рѕ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ С‚Рѕ РѕР±СЂР°С‚РЅС‹Р№ РєРѕРґ СЂР°РІРµРЅ РїСЂСЏРјРѕРјСѓ РєРѕРґСѓ СЃ РїСЂРѕС‚РёРІРѕРїРѕР»РѕР¶РЅС‹РјРё Р·Р°РЅС‡РµРЅРёСЏРјРё
 	{
 		StraightCode.insert(0, 1, '0');
-		for (int i = 0; i < StraightCode.length(); i++) // получение обратного кода, путем смены значений всех элементов
+		for (int i = 0; i < StraightCode.length(); i++) // РїРѕР»СѓС‡РµРЅРёРµ РѕР±СЂР°С‚РЅРѕРіРѕ РєРѕРґР°, РїСѓС‚РµРј СЃРјРµРЅС‹ Р·РЅР°С‡РµРЅРёР№ РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ
 		{
 			if (StraightCode[i] == '1') StraightCode[i] = '0';
 			else StraightCode[i] = '1';
@@ -29,7 +29,7 @@ std::string convert(std::string StraightCode) // перевод числа в обратный код
 
 void validation(std::string& num) {
 	bool input = true;
-	while (input) {// проверка на ввод
+	while (input) {// РїСЂРѕРІРµСЂРєР° РЅР° РІРІРѕРґ
 		getline(std::cin, num);
 
 		if (num.find_first_not_of("01") <= num.size()) {
@@ -57,14 +57,14 @@ int main() {
 	convert(num_2);
 	std::string sum;
 	int count = 0;
-	for (int i = num_1.length() - 1; i >= 0; i--) // нахождение суммы
+	for (int i = num_1.length() - 1; i >= 0; i--) // РЅР°С…РѕР¶РґРµРЅРёРµ СЃСѓРјРјС‹
 	{
-		if (count == 1) // счетчик на случай переполнения разряда
+		if (count == 1)// СЃС‡РµС‚С‡РёРє РЅР° СЃР»СѓС‡Р°Р№ РїРµСЂРµРїРѕР»РЅРµРЅРёСЏ СЂР°Р·СЂСЏРґР°
 		{
 			num_1[i]++;
 			count = 0;
 		}
-		if (num_1[i] + num_2[i] - 96 > 1) // условие переполнения разряда
+		if (num_1[i] + num_2[i] - 96 > 1)// СѓСЃР»РѕРІРёРµ РїРµСЂРµРїРѕР»РЅРµРЅРёСЏ СЂР°Р·СЂСЏРґР°
 		{
 			sum.insert(0, 1, '0');
 			count++;
