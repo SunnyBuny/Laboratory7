@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-int convertin10(std::string num14, int i, int num_10) {//аргумент num_10 передаётся нулеым для корректного перевода 
+int convertin10(std::string num14, int i, int num_10) {//Р°СЂРіСѓРјРµРЅС‚ num_10 РїРµСЂРµРґР°С‘С‚СЃСЏ РЅСѓР»РµС‹Рј РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕРіРѕ РїРµСЂРµРІРѕРґР° 
 	if (num14[i] == 'a') { num_10 += 10 * pow(14, num14.size() - i - 1); }
 	if (num14[i] == 'b') { num_10 += 11 * pow(14, num14.size() - i - 1); }
 	if (num14[i] == 'c') { num_10 += 12 * pow(14, num14.size() - i - 1); }
@@ -17,7 +17,7 @@ int convertin10(std::string num14, int i, int num_10) {//аргумент num_10 передаё
 
 }
 
-int convertin6(int num_10, int i, int num_6) {//аргумент num_6 передаётся нулеым для корректного перевода 
+int convertin6(int num_10, int i, int num_6) {//Р°СЂРіСѓРјРµРЅС‚ num_6 РїРµСЂРµРґР°С‘С‚СЃСЏ РЅСѓР»РµС‹Рј РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕРіРѕ РїРµСЂРµРІРѕРґР° 
 
 	num_6 += num_10 % 6 * pow(10, i);
 	if (num_10 != 0) {
@@ -27,14 +27,14 @@ int convertin6(int num_10, int i, int num_6) {//аргумент num_6 передаётся нулеым
 		return num_6;
 	}
 }
-// нужно перевести числа из 14ти ричной системы счисления в 6ти ричную
+// РЅСѓР¶РЅРѕ РїРµСЂРµРІРµСЃС‚Рё С‡РёСЃР»Р° РёР· 14С‚Рё СЂРёС‡РЅРѕР№ СЃРёСЃС‚РµРјС‹ СЃС‡РёСЃР»РµРЅРёСЏ РІ 6С‚Рё СЂРёС‡РЅСѓСЋ
 int main() {
 	std::string num_14;
 	int num_10;
 	int num_6;
 	std::cout << "Enter tne number in 14" << "\n";
 	bool input = true;
-	while (input) {// проверка на ввод
+	while (input) {// РїСЂРѕРІРµСЂРєР° РЅР° РІРІРѕРґ
 		getline(std::cin, num_14);
 		if (num_14.size() == 0 || num_14.size() > 10) {
 			std::cout << "The minimum number of digits and letters is 1 and maximum is 10. Enter the number again: ";
