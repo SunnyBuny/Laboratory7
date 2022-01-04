@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int sub(int x, int y) { // побитовое вычитание
+int sub(int x, int y) { // РїРѕР±РёС‚РѕРІРѕРµ РІС‹С‡РёС‚Р°РЅРёРµ
     while (y) {
         int z = (~x) & y;
         x = x ^ y;
@@ -10,7 +10,7 @@ int sub(int x, int y) { // побитовое вычитание
     return x;
 }
 
-int divide(int x, int y) { // побитовое деление
+int divide(int x, int y) { // РїРѕР±РёС‚РѕРІРѕРµ РґРµР»РµРЅРёРµ
     int res = 0;
     while (x >= y) {
         int i = 0, t = y;
@@ -24,7 +24,7 @@ int divide(int x, int y) { // побитовое деление
     return res;
 }
 
-int multiply(int x, int y) { //побитовое умножение
+int multiply(int x, int y) { //РїРѕР±РёС‚РѕРІРѕРµ СѓРјРЅРѕР¶РµРЅРёРµ
     int result = 0;
     while (y)
     {
@@ -38,7 +38,7 @@ int multiply(int x, int y) { //побитовое умножение
     return result;
 }
 
-bool mod(int x, int y) { //проверка на остаток от деления
+bool mod(int x, int y) { //РїСЂРѕРІРµСЂРєР° РЅР° РґРµР»РёРјРѕСЃС‚СЊ
     if (sub(x, multiply(divide(x, y), y)) == 0) {
         return true;
     }
